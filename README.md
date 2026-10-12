@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.9.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.10.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.9-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.10-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -25,6 +25,8 @@ Open Fetch's Settings and choose the globe icon for browser setup. Chrome, Edge,
 **Version 1.0.7:** In-app updates install silently without a separate Fetch Setup window, then automatically reopen the verified new version. The setup wizard remains available for normal first-time installation.
 
 **Version 1.0.9:** Adds file-type icons and image previews, plus right-click commands to download images, media, and links directly with Fetch. Reload the Fetch extension after updating to enable the new commands.
+
+**Version 1.0.10:** Chrome, Edge, and Brave wait for Fetch to accept and cancel the browser download before continuing to the save dialog. Reload the Fetch browser extension after updating. If a handoff fails, normal browser saving remains available. Firefox retains its existing handoff because it does not expose that early filename hook.
 
 Release downloads include **SHA256SUMS.txt** for integrity verification. [See all releases](https://github.com/GianCarlozxc/FetchRelease/releases).
 
