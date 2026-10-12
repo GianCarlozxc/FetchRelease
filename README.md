@@ -12,4 +12,3 @@ Open Fetch's Settings and choose the globe icon for browser setup. Chrome, Edge,
 
 Release downloads include **SHA256SUMS.txt** for integrity verification. [See all releases](https://github.com/GianCarlozxc/FetchRelease/releases).
 
-Application source is maintained separately in [GianCarlozxc/Fetch](https://github.com/GianCarlozxc/Fetch).
