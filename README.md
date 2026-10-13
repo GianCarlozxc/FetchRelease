@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.12.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.13.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.12-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.13-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -31,6 +31,10 @@ Open Fetch's Settings and choose the globe icon for browser setup. Chrome, Edge,
 **Version 1.0.11:** Replaces dashboard headings with 2D icons, shows received storage and progress for unfinished downloads, adds a live 60-second transfer-speed graph, and displays completed file and byte totals.
 
 **Version 1.0.12:** Handles invalid redirects safely, resets speed during download stalls, adds known extensions to extensionless downloads, and corrects fractional byte-speed formatting. Existing names and resumed download bytes are preserved.
+
+**Version 1.0.13:** Shows connected browsers and extension-version notices, adds copyable setup-folder paths, and retries temporary download failures up to three times with a countdown. Pause, cancel, removal, and app closure stop queued retries. Reload the Fetch extension after updating to activate version 1.4.0 reporting. Store submission materials are prepared; browser-store publishing/signing and store-managed updates are not live yet.
+
+[Browser integration privacy policy](privacy.md).
 
 Release downloads include **SHA256SUMS.txt** for integrity verification. [See all releases](https://github.com/GianCarlozxc/FetchRelease/releases).
 
