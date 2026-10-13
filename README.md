@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.18.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.19.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.18-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.19-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -51,6 +51,10 @@ After updating, reload the Fetch extension and refresh already-open webpages. Th
 **Version 1.0.18:** Adds Windows MAGNET registration so Fetch receives links even when a webpage constructs them inside JavaScript. Cold launches queue the incoming link until Fetch is ready; an open instance receives it directly. Duplicate pending handoffs and active torrent entries are avoided. Settings now includes Use Fetch for magnet links and default-handler status.
 
 After updating, reload extension 1.5.2 and refresh open webpages. If Windows still opens µTorrent or another saved default, choose Fetch for MAGNET through Settings → Use Fetch for magnet links. Windows' protected default-app choice is preserved. This release also fixes Unchecked runtime.lastError: Invalid downloadId while keeping successful browser transfers free of Save As prompts and duplicate downloads. All 105 automated tests, hidden UI checks and real Brave tests passed.
+
+**Version 1.0.19:** Keeps magnet Sending status visible until handoff finishes, adds native-connector and extension-reply timeouts, and shows persistent errors with recovery steps. Handles synchronous Extension context invalidated errors from stale webpages and missing background replies without leaving Sending stuck. Fetch comes forward before torrent-engine startup.
+
+Includes extension 1.5.3. After updating, reload the Fetch extension and refresh open webpages. Check Fetch's download list before retrying a timed-out link. All 109 automated tests and real Brave handoff checks passed, including a local test magnet sent from the reported HTTPS page to the real torrent engine. The original user-specific stalled handoff was not reproduced; this release improves error handling and visibility.
 
 Release downloads include **SHA256SUMS.txt** for integrity verification. [See all releases](https://github.com/GianCarlozxc/FetchRelease/releases).
 
