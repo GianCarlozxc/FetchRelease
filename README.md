@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.23.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.24.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.23-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.24-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -74,3 +74,7 @@ All 127 automated tests and hidden UI checks passed, including repeated pause/re
 **Version 1.0.23:** Prevents mixed file contents on resume by checking the entire saved prefix when a server provides no validator. This rereads the prefix over the network while keeping displayed progress; changed content offers Restart download. Restores regular progress from partial files and checkpoints active transfers. Unfinished browser credentials are encrypted with Windows DPAPI when available, and repeating the same paused or failed URL from the browser refreshes its existing entry.
 
 All 133 automated tests, Windows credential encryption checks and hidden UI checks passed. Includes extension 1.6.0. Older history entries may need a fresh browser handoff to restore session credentials.
+
+**Version 1.0.24:** Adds torrent file selection with High, Normal and Low priorities, plus overall and per-download speed limits. Use a download row controls button to choose files after metadata arrives or set a per-download cap. Settings contains the overall cap shared across active regular files and torrents. Enter KB/s, or 0 for unlimited. High torrent files complete before Normal and Low. Opening active torrent controls pauses it; Apply resumes it, while Cancel keeps it paused. Saved files are preserved and shared pieces may contain bytes from skipped files.
+
+All 139 automated tests and hidden UI checks passed, including real torrent file order, selection and speed caps, concurrent HTTP limits, live changes and pause handling. Includes extension 1.6.0.
