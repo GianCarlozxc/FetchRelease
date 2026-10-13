@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.19.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.20.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.19-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.20-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -58,3 +58,7 @@ Includes extension 1.5.3. After updating, reload the Fetch extension and refresh
 
 Release downloads include **SHA256SUMS.txt** for integrity verification. [See all releases](https://github.com/GianCarlozxc/FetchRelease/releases).
 
+
+**Version 1.0.20:** Corrects connected-browser names for Chrome, Brave, Edge and Firefox and refreshes the status immediately after pairing. Adds embedded image and page-generated file capture up to 10 MB, preserving filenames, file types and exact bytes. Unsupported or unavailable generated files fall back to browser saving.
+
+Includes extension 1.6.0. Reload the Fetch extension and refresh open webpages after updating. All 122 automated tests passed; real Chrome and Brave verified identity and download handoff, and Chrome native Save image as checks covered regular, embedded and generated images plus generated PDF downloads.
