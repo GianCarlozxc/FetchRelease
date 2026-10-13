@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.22.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.23.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.22-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.23-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -70,3 +70,7 @@ After updating Fetch, use Resume on the failed torrent to retry. This release re
 **Version 1.0.22:** Fixes pause/resume progress for browser downloads and torrents. Regular downloads resume from saved bytes on servers supporting HTTP Range, even without ETag or Last-Modified headers, and paused byte counts match the saved file. A changed total size rejects resume; servers ignoring ranges still require restarting. Torrents preserve saved progress while finding metadata or checking pieces, then show the verified result.
 
 All 127 automated tests and hidden UI checks passed, including repeated pause/resume, history reload, exact bytes and real torrent tests. After updating Fetch, use Resume on paused downloads. Includes extension 1.6.0.
+
+**Version 1.0.23:** Prevents mixed file contents on resume by checking the entire saved prefix when a server provides no validator. This rereads the prefix over the network while keeping displayed progress; changed content offers Restart download. Restores regular progress from partial files and checkpoints active transfers. Unfinished browser credentials are encrypted with Windows DPAPI when available, and repeating the same paused or failed URL from the browser refreshes its existing entry.
+
+All 133 automated tests, Windows credential encryption checks and hidden UI checks passed. Includes extension 1.6.0. Older history entries may need a fresh browser handoff to restore session credentials.

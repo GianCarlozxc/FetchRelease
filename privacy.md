@@ -2,7 +2,7 @@
 
 Fetch Browser Integration sends supported file downloads to the Fetch Windows application on the same computer. It has no analytics, advertising, or telemetry service.
 
-The extension reads the download URL, suggested filename, referring page, and cookies for the specific download URL when needed to download an authenticated file. These are sent only to the paired Fetch application at 127.0.0.1 over localhost. Cookies are used in memory and are not written to Fetch download history. Fetch stores download URLs and progress in local history. Cross-origin redirects remove cookies and referrer headers.
+The extension reads the download URL, suggested filename, referring page, and cookies for the specific download URL when needed to download an authenticated file. These are sent only to the paired Fetch application at 127.0.0.1 over localhost. For unfinished downloads, Fetch can retain these request headers encrypted with Windows DPAPI so authenticated transfers can resume after reopening the app. They are not stored as plaintext or exposed to the interface; completed or removed entries discard their encrypted headers. If encryption is unavailable, headers stay only in memory. Fetch stores download URLs and progress in local history. Cross-origin redirects remove cookies and referrer headers. Sending the same paused or failed file again from the browser refreshes that entry's session without adding a duplicate.
 
 The extension stores its local pairing token, enable/disable preference, connection details, and last transfer error in the browser's local extension storage. Connection reporting sends the browser name and Fetch extension version to the local application. It does not send browsing history, cookies, or download details to an analytics server.
 
