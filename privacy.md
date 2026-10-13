@@ -11,3 +11,5 @@ Downloads contact the file's website. In-app update checks contact GitHub. Brows
 Users can disable capture in the extension popup, remove entries from Fetch history, or uninstall the extension. Removing a completed history entry preserves its downloaded file.
 
 Support: https://github.com/GianCarlozxc/FetchRelease/issues
+
+Torrent links and .torrent downloads explicitly sent to Fetch use its bundled BitTorrent engine. BitTorrent involves network connections to trackers, DHT bootstrap servers and peers, which can receive your IP address and torrent information. Downloading can upload pieces to peers; Fetch stops seeding after completion. Torrent filenames, paths and progress are retained locally in Fetch history. Browser cookies are not retrieved for magnet URIs.

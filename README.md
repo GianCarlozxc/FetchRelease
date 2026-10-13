@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.15.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.16.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.15-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.16-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -39,6 +39,10 @@ Open Fetch's Settings and choose the globe icon for browser setup. Chrome, Edge,
 **Version 1.0.14:** Adds a remembered browser picker for Chrome, Brave, Firefox, and Edge in Settings browser setup, with matching instructions, connection status, extension-folder actions, and copyable settings addresses.
 
 **Version 1.0.15:** The extension button shows Connected when Fetch is connected and Connect to Fetch otherwise. The popup refreshes every three seconds and checks status without launching a closed app; clicking Connect still opens or reconnects Fetch. Reload the extension after updating to activate version 1.4.1.
+
+**Version 1.0.16:** Adds real .torrent and BitTorrent v1 magnet downloads, with actual filenames, progress, speed, peers and seeders. A shared queue limits simultaneous transfers to 1–10 (default 3), supports waiting-download priorities, and adds Pause all / Resume all. Torrent contents and resume files are preserved on pause or removal. The separate aria2 engine and its licenses/source reference are included.
+
+Choose Add torrent or Magnet link in Fetch. Browser extension 1.5.0 can send magnet links through the right-click Download link with Fetch command; captured .torrent downloads automatically start their contents. Reload the included extension after updating. Normal magnet clicks follow your Windows default app. Torrents need reachable peers or web seeds, can upload pieces while downloading, and stop seeding on completion.
 
 Release downloads include **SHA256SUMS.txt** for integrity verification. [See all releases](https://github.com/GianCarlozxc/FetchRelease/releases).
 
