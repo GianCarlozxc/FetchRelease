@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.16.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.17.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.16-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.17-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -43,6 +43,10 @@ Open Fetch's Settings and choose the globe icon for browser setup. Chrome, Edge,
 **Version 1.0.16:** Adds real .torrent and BitTorrent v1 magnet downloads, with actual filenames, progress, speed, peers and seeders. A shared queue limits simultaneous transfers to 1–10 (default 3), supports waiting-download priorities, and adds Pause all / Resume all. Torrent contents and resume files are preserved on pause or removal. The separate aria2 engine and its licenses/source reference are included.
 
 Choose Add torrent or Magnet link in Fetch. Browser extension 1.5.0 can send magnet links through the right-click Download link with Fetch command; captured .torrent downloads automatically start their contents. Reload the included extension after updating. Normal magnet clicks follow your Windows default app. Torrents need reachable peers or web seeds, can upload pieces while downloading, and stop seeding on completion.
+
+**Version 1.0.17:** Webpage magnet-link clicks go directly to Fetch through extension 1.5.1. Fetch opens if closed; the extension prevents the default torrent handler from launching alongside it, avoids duplicate pending handoffs, and shows errors on the webpage. Left and middle clicks, nested elements and embedded frames are supported. Disabled capture, private windows and ordinary links keep their normal behavior.
+
+After updating, reload the Fetch extension and refresh already-open webpages. This captures actual magnet URLs in links or data-magnet/data-url/data-href attributes. Buttons that construct links only inside webpage JavaScript may require copying the magnet into Fetch. All 100 automated tests and real Brave click/handoff checks passed.
 
 Release downloads include **SHA256SUMS.txt** for integrity verification. [See all releases](https://github.com/GianCarlozxc/FetchRelease/releases).
 
