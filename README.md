@@ -2,9 +2,9 @@
 
 Fetch is a Windows download manager with live progress and speed, automatic browser handoff, pause/resume, download history, animations, and optional sounds.
 
-**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.25.exe)**
+**[Download Fetch Setup](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-Setup-1.0.26.exe)**
 
-**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.25-with-extensions.zip)**
+**[Download the portable ZIP](https://github.com/GianCarlozxc/FetchRelease/releases/latest/download/Fetch-1.0.26-with-extensions.zip)**
 
 The installer creates a desktop shortcut and configures the Windows browser connector. Both downloads include the Chromium and Firefox browser extensions. Enable the included extension once in each browser; Fetch can then open automatically when a supported download starts, including when Fetch was closed.
 
@@ -82,3 +82,7 @@ All 139 automated tests and hidden UI checks passed, including real torrent file
 **Version 1.0.25:** Improves reported document-download HTTP 404 failures by starting from the original browser URL rather than a temporary final redirect. Session cookies issued during same-origin redirects are retained with domain, path, secure and expiry checks; cross-origin cookies and referrers remain excluded. Includes extension 1.6.1: reload the extension after updating and retry the document from its website.
 
 Tests were skipped at the user request. The specific failing site was not supplied, and this change was not verified against that download. Missing server files and unsupported protected or POST exports can still require browser saving. Release packaging and uploaded checksums are verified.
+
+**Version 1.0.26:** Adds a browser-session fallback after HTTP 401 or 403 for files up to 10 MB. An existing non-private tab on the exact same origin retrieves the requested file using its current session and sends its bytes to Fetch. HTML approval pages are rejected; normal survey, login or browser approval steps must still be completed by the user. Keep the CSC page open, reload extension 1.7.0 after updating, refresh the page and retry the download. Unavailable, cross-origin or larger files can still need browser saving.
+
+Tests were skipped. CSC page inspection found a Cloudflare Attention Required HTTP 403 for a non-browser request; the new fallback has not been runtime-tested against the user browser session. Package versions, file hashes and release uploads are verified.

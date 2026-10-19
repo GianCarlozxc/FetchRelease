@@ -12,6 +12,8 @@ Users can disable capture in the extension popup, remove entries from Fetch hist
 
 Support: https://github.com/GianCarlozxc/FetchRelease/issues
 
+If a requested HTTP/HTTPS download is refused with HTTP 401 or 403, the extension can ask an already-open, non-private tab on the exact same origin to fetch that file using its existing browser session. Files up to 10 MB are sent to Fetch over the paired localhost connection, with their original URL and filename. This fallback runs only for a download already sent to Fetch; it does not scan unrelated pages, solve browser challenges, or accept HTML approval pages as files. If browser approval is still required, the original browser download is resumed when possible.
+
 Torrent links and .torrent downloads explicitly sent to Fetch use its bundled BitTorrent engine. BitTorrent involves network connections to trackers, DHT bootstrap servers and peers, which can receive your IP address and torrent information. Downloading can upload pieces to peers; Fetch stops seeding after completion. Torrent filenames, paths and progress are retained locally in Fetch history. Browser cookies are not retrieved for magnet URIs.
 
 When capture is enabled, the extension listens for genuine clicks on magnet links on HTTP/HTTPS pages, including embedded frames. It sends the clicked magnet URL and referring page to Fetch through the extension background process. It does not capture private-window links, inspect unrelated page content or trigger downloads from synthetic page clicks. Capture can be disabled in the extension popup.
